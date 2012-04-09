@@ -9,7 +9,21 @@
 </head>
 
 <body>
+<div id="main">
 
+<header>
+<h1>Dinosaari</h1>
+</header>
+
+<!-- Tassa on navigointipalkki, render_navigation muuttaa  config/navigation.rb
+tiedostossa olevat itemit html-muotoiseksi listaksi -->
+
+<div id ="ylapalkki">
+	<%= render_navigation %>
+<div class="clear"/>
+</div>
+
+</div>
 <%= yield %>
 
 

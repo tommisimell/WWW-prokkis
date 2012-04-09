@@ -4,9 +4,10 @@ SimpleNavigation::Configuration.run do |navigation|
 
   navigation.items do |primary|
 
-    primary.item :kirjat, 'kirjat'
-	primary.item :autot, 'autot'
-	primary.item :aseet, 'aseet'
+	primary.item :home, 'etusivu', home_index_path
+    primary.item :kirjat, 'kirjat', 'http://www.google.fi'
+	primary.item :posts, 'Postit', posts_path
+	primary.item :aseet, 'aseet', 'http://www.puolustusvoimat.fi'
 	
 
    

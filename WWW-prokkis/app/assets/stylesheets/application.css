@@ -11,3 +11,32 @@
  *= require_self
  *= require_tree .
 */
+
+h1 { color: red;} 
+
+
+
+#ylapalkki {
+background: #7CFC00;
+}
+
+#ylapalkki li, #alapalkki li {
+display: block;
+float: left;
+padding: 5px;
+}
+
+#ylapalkki a, #alapalkki a {
+display: block;
+float: left;
+}
+
+.clear {
+clear: both;
+}
+
+#main {
+	width: 960px;
+	margin: 0 auto;
+	
+}
