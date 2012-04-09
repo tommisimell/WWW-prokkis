@@ -1,4 +1,12 @@
 WWWProkkis::Application.routes.draw do
+  get "pages/yhteystiedot"
+
+  get "pages/historia"
+
+  get "pages/lajiesittely"
+
+  get "pages/palvelut"
+
   resources :posts
 
   get "home/index"

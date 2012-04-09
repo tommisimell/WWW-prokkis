@@ -31,6 +31,14 @@ display: block;
 float: left;
 }
 
+.here {
+	background:#ccc;
+}
+
+#alapalkki {
+	background: #ccc;
+}
+
 .clear {
 clear: both;
 }
