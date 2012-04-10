@@ -14,7 +14,7 @@
 
 h1 { color: red;} 
 
-
+a {text-decoration: none }
 
 #ylapalkki {
 background: #7CFC00;
@@ -23,20 +23,23 @@ background: #7CFC00;
 #ylapalkki li, #alapalkki li {
 display: block;
 float: left;
-padding: 5px;
+padding-left: 3px;
+padding-right: 2px;
 }
 
-#ylapalkki a, #alapalkki a {
+#alapalkki a {
 display: block;
 float: left;
+color: white;
 }
 
-.here {
-	background:#ccc;
+.selected {
+	background:#33CC00;
 }
 
-#alapalkki {
-	background: #ccc;
+#alapalkki, #alapalkki li {
+	background: #33CC00;
+	color: white;
 }
 
 .clear {
