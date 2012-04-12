@@ -6,13 +6,13 @@ SimpleNavigation::Configuration.run do |navigation|
 
 	primary.item :home, 'Etusivu', home_index_path
 	
-	primary.item :yhteystiedot, 'Yhteystiedot', pages_yhteystiedot_path do |yhteystiedot|
-		yhteystiedot.item :historia ,'Historia', pages_historia_path
-		yhteystiedot.item :palvelut ,'Palvelut', pages_palvelut_path
+	primary.item :tietoa_saaresta, 'Tietoa saaresta', pages_historia_path do |tietoa_saaresta|
+		tietoa_saaresta.item :historia ,'Historia', pages_historia_path
+		tietoa_saaresta.item :palvelut ,'Palvelut', pages_palvelut_path
+		tietoa_saaresta.item :lajiesittely ,'Lajiesittely', pages_lajiesittely_path
 		end
-	primary.item :posts, 'Postit', posts_path do |posts|
-		posts.item :lajiesittely ,'Lajiesittely', pages_lajiesittely_path
-		end
+	primary.item :yhteystiedot, 'Yhteystiedot', pages_yhteystiedot_path
+	primary.item :posts, 'Postit', posts_path
 	
 
    
