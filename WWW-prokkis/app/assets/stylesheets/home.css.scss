@@ -1,3 +1,46 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#container {
+height:100px;
+ width:500px;
+ font-family:Tahoma;
+ }
+ 
+ #carousel {
+ height:100px;
+ width:500px;
+ border:1px solid #000;
+ overflow:hidden;
+ }
+ 
+ #carousel ul {
+ list-style-type:none;margin-top:4px;
+ width:2000px;
+ margin-left:0;
+ left:0;
+ padding-left:1px;
+ }
+ 
+ #carousel li {
+ display:inline;
+ }
+ 
+ #carousel ul li img{
+ width:90px;
+ height:90px;
+ border:1px solid #ccc;
+ float:left;
+ }
+ 
+ #navPrev {
+ float:left;
+ 
+ }
+ 
+ #navNext {
+ 
+ float:right;
+ }
+
