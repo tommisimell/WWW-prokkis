@@ -47,6 +47,10 @@ color: white;
 	color: white;
 }
 
+#content {
+	background: #7CFC00;
+}
+
 .clear {
 clear: both;
 }

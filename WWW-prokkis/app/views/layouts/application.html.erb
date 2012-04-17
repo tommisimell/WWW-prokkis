@@ -29,7 +29,7 @@ tiedostossa olevat itemit html-muotoiseksi listaksi -->
 
 <div id ="ylapalkki">
 	<%= render_navigation(:level => 1) %>
-<div class="clear"/>
+<div class="clear"></div>
 </div>
 
 <!-- Sama alapalkille, lukee siis talla kertaa vain alemman 'do' luupin sisalla 
@@ -37,12 +37,12 @@ olevia teksteja-->
 
 <div id ="alapalkki">
 <%= render_navigation(:level => 2) %>
-<div class="clear"/>
+<div class="clear"></div>
 </div>
 
-</div>
+
 <%= yield %>
-
+</div>
 
 </body>
 </html>

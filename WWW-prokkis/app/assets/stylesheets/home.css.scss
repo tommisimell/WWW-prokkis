@@ -3,14 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #container {
-height:100px;
- width:500px;
+height:200px;
+ width:200px;
  font-family:Tahoma;
  }
  
  #carousel {
- height:100px;
- width:500px;
+ height:150px;
+ width:180px;
  border:1px solid #000;
  overflow:hidden;
  }
@@ -28,8 +28,8 @@ height:100px;
  }
  
  #carousel ul li img{
- width:90px;
- height:90px;
+ width:178px;
+ height:140px;
  border:1px solid #ccc;
  float:left;
  }
