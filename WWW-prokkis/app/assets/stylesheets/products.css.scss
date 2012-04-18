@@ -1,0 +1,36 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* muokataan tuotteiden esilletuloa */
+.title {
+	font-size: 16pt;
+	font-weight: bold;
+	margin-bottom: 16px;
+	}
+	
+.title a, a:hover {
+	color: maroon;
+}
+
+.description {
+	margin-bottom: 16px;
+}
+
+.price {
+	color: maroon;
+	font-weight: 800;
+	font-size: 14pt;
+	text-align: right;
+	margin-right: 3em;
+}
+
+.price_line {
+      margin-left: 100px;
+      margin-top: 0.5em; 
+      margin-bottom: 0.8em; 
+
+      form, div {
+        display: inline;
+      }
+}
