@@ -1,7 +1,8 @@
-
-#siks näin et muuten navigoitaessa ostoskorin sisältö katois. luodaan uusi cartti jos sitä ei ole
+#siks näin et muuten navigoitaessa ostoskorin sisältö katois.
+#luodaan uusi cartti jos sitä ei ole
 #poimii url-osotteesta juttuja
-# hash id quantity -pareista
+# muodostuu hash id quantity -pareista
+
 class CartsController < ApplicationController
 	def index
 		@carts = session[:carts] || {}

@@ -6,21 +6,16 @@
 	<% @carts.each do |id, quantity| %>
 	<% product = Product.find(id) %>
 	<tr>
-	<!-- AO KUVAAN VIITTAUS EI KUNNOS -->
-		<td width="40"><%= image_tag(product.image_url) %></td>
-		<td><% product.title %></td>
-		<td width="10"><% quantity %></td>
-		<td width="10"><% number_to_currency product.price, :unit => "&euro;" %></td>
-		<td width="10"><% number_to_currency product.price * quantity, :unit => "&euro;" %></td>
+		<td><%= image_tag((product.image_url), :width => 90) %></td>
+		<td width="80"><%= product.title %></td>
+		<td width="30"><%= quantity %></td>
+		<td width="60"><%= number_to_currency product.price, :unit => "&euro;" %></td>
+		<td width="60"><%= number_to_currency product.price * quantity, :unit => "&euro;" %></td>
 	</tr>
 	<% total += quantity * product.price %>
 <% end %>
 <tr>
 	<td colspan="4">Total:</td>
-	<td><% number_to_currency total, :unit => "&euro;" %></td>
+	<td><%= number_to_currency total, :unit => "&euro;" %></td>
 </tr>
 </table>
-
-
-
-<%= image_tag("yhteystietokuva.png", :alt => "Yhteystiedot", :id =>"otsikkokuva")%>
