@@ -19,7 +19,7 @@ a {text-decoration: none }
 
 body
 {
-background-image:url('taustakuva.png');
+background-image:url('taustakuva.jpg');
 } 
 
 #ylapalkki {
@@ -90,5 +90,6 @@ height: 100px;
 }
 
 #flashkartta  {
-	position: center;
+	display: block;
+	float: center;
 }
