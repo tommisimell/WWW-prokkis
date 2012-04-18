@@ -19,6 +19,20 @@ WWWProkkis::Application.routes.draw do
   get "pages/palvelut"
   
   get "pages/kartta"
+  
+  get "pages/safari"
+  
+  get "pages/metsastys"
+  
+  get "pages/extreme"
+  
+  get "pages/varusteet"
+  
+  get "pages/aseet"
+  
+  get "pages/alueet"
+  
+  get "pages/ajoneuvot"
 
   resources :posts
 
