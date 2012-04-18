@@ -16,6 +16,7 @@ h1 { color: red;}
 
 a {text-decoration: none }
 
+
 body
 {
 background-image:url('taustakuva.png');
@@ -47,6 +48,10 @@ color: white;
 	color: white;
 }
 
+#content {
+	background: #7CFC00;
+}
+
 .clear {
 clear: both;
 }
@@ -65,4 +70,25 @@ height: 200px;
 #otsikkokuva {
 width: 100%;
 height: 100px;
+}
+
+#tekijanoikeus {
+	text-align: center;
+}
+
+#leipateksti {
+	display: block;
+	width: 40%;
+	text-align:left;
+	float: left;
+}
+
+#oikeateksti {
+	display: block;
+	width: 40%;
+	float: right;
+}
+
+#flashkartta  {
+	position: center;
 }

@@ -17,6 +17,8 @@ WWWProkkis::Application.routes.draw do
   get "pages/lajiesittely"
 
   get "pages/palvelut"
+  
+  get "pages/kartta"
 
   resources :posts
 

@@ -10,4 +10,5 @@ class PagesController < ApplicationController
 
   def palvelut
   end
+
 end
