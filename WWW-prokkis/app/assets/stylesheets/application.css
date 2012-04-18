@@ -77,5 +77,18 @@ height: 100px;
 }
 
 #leipateksti {
+	display: block;
 	width: 40%;
+	text-align:left;
+	float: left;
+}
+
+#oikeateksti {
+	display: block;
+	width: 40%;
+	float: right;
+}
+
+#flashkartta  {
+	position: center;
 }
