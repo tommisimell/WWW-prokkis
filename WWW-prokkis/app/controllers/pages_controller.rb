@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def yhteystiedot
+  
   end
 
   def historia
@@ -9,6 +10,10 @@ class PagesController < ApplicationController
   end
 
   def palvelut
+  end
+  
+  def safari
+	
   end
 
 end
