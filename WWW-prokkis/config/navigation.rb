@@ -26,7 +26,6 @@ SimpleNavigation::Configuration.run do |navigation|
 		tietoa_saaresta.item :kartta ,'Interaktiivinen kartta', pages_kartta_path
 		end
 	primary.item :yhteystiedot, 'Yhteystiedot', pages_yhteystiedot_path
-	primary.item :posts, 'Postit', posts_path
 	
 
    
