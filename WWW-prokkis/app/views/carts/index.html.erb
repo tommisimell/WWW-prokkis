@@ -1,16 +1,17 @@
 <h1>What your cart includes</h1>
 
 <% total = 0 %>
+
 <table>
 	<% @carts.each do |id, quantity| %>
 	<% product = Product.find(id) %>
 	<tr>
 	<!-- AO KUVAAN VIITTAUS EI KUNNOS -->
-		<td><%= image_tag "shotgun.png", :width => 60 %></td>
+		<td width="40"><%= image_tag(product.image_url) %></td>
 		<td><% product.title %></td>
-		<td widhth="60"><% quantity %></td>
-		<td widhth="60"><% number_to_currency product.price, :unit => "&euro;" %></td>
-		<td widhth="60"><% number_to_currency product.price * quantity, :unit => "&euro;" %></td>
+		<td width="10"><% quantity %></td>
+		<td width="10"><% number_to_currency product.price, :unit => "&euro;" %></td>
+		<td width="10"><% number_to_currency product.price * quantity, :unit => "&euro;" %></td>
 	</tr>
 	<% total += quantity * product.price %>
 <% end %>

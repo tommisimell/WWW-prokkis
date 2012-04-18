@@ -17,7 +17,7 @@ kuvaa tai otsikkoa. Sanitize putsaa epavalidin html:n.-->
 <% @products.each do |product| %>
   <tr>
   <!-- AO KUVAAN VIITTAUS EI KUNNOS shotgunin tilalle product.image_url-->
-    <td><%= image_tag "shotgun.png" %></td>
+    <td><%= image_tag(product.image_url) %></td>
 	<td>
     <div class="title"><%= link_to product.title, product %></div>
     <div class="description"><%= sanitize(product.description) %></div>
