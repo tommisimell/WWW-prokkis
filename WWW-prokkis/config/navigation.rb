@@ -23,7 +23,7 @@ SimpleNavigation::Configuration.run do |navigation|
 		tietoa_saaresta.item :historia ,'Historia', pages_historia_path
 		tietoa_saaresta.item :palvelut ,'Palvelut', pages_palvelut_path
 		tietoa_saaresta.item :lajiesittely ,'Lajiesittely', pages_lajiesittely_path
-		tietoa_saaresta.item :kartta ,'Interaktiivinen kartta', pages_kartta_path
+		tietoa_saaresta.item :kartta ,'Kartta', pages_kartta_path
 		end
 	primary.item :yhteystiedot, 'Yhteystiedot', pages_yhteystiedot_path
 	
