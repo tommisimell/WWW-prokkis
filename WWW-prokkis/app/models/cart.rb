@@ -1,11 +1,23 @@
 class Cart < ActiveRecord::Base
-	
-	# KOKO PASKA KAI SEMI TURHA
-	
-	# yhteen cartiin on sidottu useampia line-itemeja; sidottu, koska
-	# line item sisaltaa viittauksen cartinsa id:hen
-	
-	# dependent: :destroy viittaa siihen, etta line itemin olemassaolo riippuu cartista
-	# toisin sanoen kun tuhotaan cart niin myos siina olevat line itemit poistetaan
-	has_many :line_items, dependent: :destroy
+
+# Ao on koodia jolla jossain webi-esimerkissä oli muutettu määrää
+
+#def increment_product_quantity(id, quantity)
+ #  product_to_increment = @items.select{|product| product.product_id == id}
+
+   # We do this because select will return an array
+  # unless product_to_increment.empty?
+   #   product_to_increment = product_to_increment.first
+   #else
+      # your error handling here
+   #end
+
+   #product_to_increment.quantity = quantity
+#end
+
+#def remove_product(id)
+ #  @items.delete_if {|product| product.product_id == id }
+#end
+
+
 end

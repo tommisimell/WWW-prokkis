@@ -1,6 +1,6 @@
-<h1>These are our products</h1>      
+<h1>Tuotteemme</h1>      
 
-<%= link_to "Your Cart", :controller => :carts, :action => :index %>
+<%= link_to "Ostoskoriin", :controller => :carts, :action => :index %>
 
 <!-- talla lisataan sellanen magee vaakaviiva eri productien valiin -->
  <tr> <td colspan="8">
@@ -20,13 +20,13 @@ kuvaa tai otsikkoa. Sanitize putsaa epavalidin html:n.-->
 	<td>
     <div class="title"><%= link_to product.title, product %></div>
     <div class="description"><%= sanitize(product.description) %></div>
-    <div class="links"> <%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> |
-    <%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></div>
+    <div class="links"> <%= link_to 'Lisatiedot', product %> | <%= link_to 'Muokkaa', edit_product_path(product) %> |
+    <%= link_to 'Poista tuote', product, :confirm => 'Oletko varma?', :method => :delete %></div>
 	
 	<!-- tuon tavoitteena on vaihtaa hinta Suomen euroiksi. span liittyy jutun nayttamiseen -->
 	<div class="price_line">
 		<span class="price"><%= number_to_currency product.price, :unit => "&euro;" %></span>
-		<%= button_to 'Add to Cart', :controller => :carts, :action => :add, :id => product %>
+		<%= button_to 'Lisaa ostoskoriin', :controller => :carts, :action => :add, :id => product %>
 		</div>
 	</td>
   </tr>
@@ -41,4 +41,4 @@ kuvaa tai otsikkoa. Sanitize putsaa epavalidin html:n.-->
 
 <br />
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Uusi tuote', new_product_path %>
