@@ -44,7 +44,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to(@product, :notice => 'Product was successfully created.') }
+        flash[:notice] = 'Onnistuit lisaamaan tuotteen!'
+		format.html { redirect_to(admin_index_path) }
         format.xml { render :xml => @product, :status => :created, :location => @product }
       else
         format.html { render :action => "new" }
@@ -60,7 +61,8 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
-        format.html { redirect_to(@product, :notice => 'Product was successfully updated.') }
+        flash[:notice] = 'Tekemasi tuotepaivitys onnistui.'
+		format.html { redirect_to(admin_index_path)}
         format.xml { head :ok }
       else
         format.html { render :action => "edit" }
@@ -73,8 +75,8 @@ class ProductsController < ApplicationController
   # DELETE /products/1.xml
   # Vanha tapa: @product = Product.find(params[:id])
   
-  # ONGELMA: Where palauttaa kokoelman ActiveRecord-relaatioita, joten .firstin avulla saadaan objekti käpistelyyn
-  # vois olla myös @product = Product.where({:group => params[:id]}).first
+  # ONGELMA: Where palauttaa kokoelman ActiveRecord-relaatioita, joten .firstin avulla saadaan objekti kÃ¤pistelyyn
+  # vois olla myÃ¶s @product = Product.where({:group => params[:id]}).first
   def destroy
     @product = Product.find(params[:id])
     @product.destroy

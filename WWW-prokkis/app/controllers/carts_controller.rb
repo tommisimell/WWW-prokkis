@@ -20,7 +20,7 @@ class CartsController < ApplicationController
 	def empty_cart
 		session[:carts] = nil
 		flash[:notice] = "Ostoskorissasi ei ole tuotteita"
-		redirect_to :action => :index
+		redirect_to "/home/index"
 	end
 
 end

@@ -21,8 +21,10 @@
 		<td><%= number_to_currency total, :unit => "&euro;" %></td>
 	</tr>
 	</table>
-
-<%= link_to "Takaisin tuotelistaan", "/products/group/varusteet" %> |
-<%= button_to "Tyhjennä ostoskori", :action => :empty_cart %>
-
+s
+<tr>
+	<td width="60"><%= link_to "Takaisin tuotelistaan", "/products/group/varusteet" %> </td>
+	<td width="60"><%= button_to "Tyhjennä ostoskori", :controller => :carts_controller, :action => :empty_cart %> </td>
+</tr>
+	
 </div>

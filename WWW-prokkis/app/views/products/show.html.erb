@@ -1,31 +1,34 @@
+<div id="content">
+
 <p id="notice"><%= notice %></p>
 
 
 
 <p>
-  <b>Product:</b>
+  <b>Tuoteryhmä:</b>
   <%= @product.group %>
 </p>
 
 <p>
-  <b>Title:</b>
+  <b>Tuote:</b>
   <%= @product.title %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Tuotteen kuvaus:</b>
   <%= @product.description %>
 </p>
 
 <p>
-  <b>Price:</b>
+  <b>Hinta:</b>
   <%= @product.price %>
 </p>
 
 <p>
-  <b>Image url:</b>
+  <b>Tuotekuvan url-osoite:</b>
   <%= @product.image_url %>
 </p>
 
+<%= link_to 'Takaisin', :back %>
 
-<%= link_to 'Takaisin', admin_index_path %>
+</div>
