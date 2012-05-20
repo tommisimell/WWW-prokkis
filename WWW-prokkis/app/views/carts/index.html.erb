@@ -1,3 +1,5 @@
+<div id = "content">
+
 <h1>Ostoskorisi</h1>
 
 <% total = 0 %>
@@ -20,4 +22,7 @@
 	</tr>
 	</table>
 
-<%= link_to "Takaisin tuotelistaan", :controller => :products, :action => :index %>
+<%= link_to "Takaisin tuotelistaan", admin_index_path %> |
+<%= button_to "Tyhjennä ostoskori", :action => :empty_cart %>
+
+</div>

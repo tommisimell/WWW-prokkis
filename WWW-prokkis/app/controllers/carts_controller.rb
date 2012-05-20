@@ -1,5 +1,5 @@
-#siks n�in et muuten navigoitaessa ostoskorin sis�lt� katois.
-#luodaan uusi cartti jos sit� ei ole
+#siks näin et muuten navigoitaessa ostoskorin sisältö katois.
+#luodaan uusi cartti jos sitä ei ole
 #poimii url-osotteesta juttuja
 # muodostuu hash id quantity -pareista
 
@@ -16,4 +16,11 @@ class CartsController < ApplicationController
 		redirect_to :action => :index
 	end
 	
+	# Tässä on vielä jotain hyvinkin hämärää.
+	def empty_cart
+		session[:carts] = nil
+		flash[:notice] = "Ostoskorissasi ei ole tuotteita"
+		redirect_to :action => :index
+	end
+
 end

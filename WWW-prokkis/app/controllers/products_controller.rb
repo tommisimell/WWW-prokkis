@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.xml
   def show
-    @product = Product.find(params[:id]) # <- :id = params[:id]
+    @product = Product.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -71,12 +71,16 @@ class ProductsController < ApplicationController
 
   # DELETE /products/1
   # DELETE /products/1.xml
+  # Vanha tapa: @product = Product.find(params[:id])
+  
+  # ONGELMA: Where palauttaa kokoelman ActiveRecord-relaatioita, joten .firstin avulla saadaan objekti käpistelyyn
+  # vois olla myös @product = Product.where({:group => params[:id]}).first
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to(products_url) }
+      format.html { redirect_to(admin_index_path) }
       format.xml { head :ok }
     end
   end
