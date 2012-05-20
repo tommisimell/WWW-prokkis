@@ -1,4 +1,4 @@
-<h1>Ostoskorissasi on</h1>
+<h1>Ostoskorisi</h1>
 
 <% total = 0 %>
 
@@ -14,10 +14,10 @@
 	</tr>
 	<% total += quantity * product.price %>
 <% end %>
-<tr>
-	<td colspan="4">Total:</td>
-	<td><%= number_to_currency total, :unit => "&euro;" %></td>
-</tr>
-</table>
+	<tr>
+		<td colspan="4">Total:</td>
+		<td><%= number_to_currency total, :unit => "&euro;" %></td>
+	</tr>
+	</table>
 
 <%= link_to "Takaisin tuotelistaan", :controller => :products, :action => :index %>

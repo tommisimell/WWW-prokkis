@@ -1,0 +1,10 @@
+safari
+metsästys
+extreme
+varusteet
+aseet
+alueet
+ajoneuvot
+
+ON kaikki kohtalaisen turhia - navigation.rb -filen mukaan hyödynnetään
+partialia (~muotti) joka tehtiin kaikille producteille yhteiseksi

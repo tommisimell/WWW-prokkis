@@ -1,10 +1,15 @@
-class ProductsController < ApplicationController
+class AdminController < ApplicationController
+  
+  # Admin-näkymälle salasanasuojaus
+   http_basic_authenticate_with :name => "frodo", :password => "thering"
+  
   # GET /products
   # GET /items.xml
-  def group
-	@products = Product.where({:group => params[:id]}).all
-	
-	 respond_to do |format|
+  def index
+  # admin-näkymässä halutaan näyttää kaikki tuotteet
+    @products = Product.all  
+
+    respond_to do |format|
       format.html # index.html.erb
       format.xml { render :xml => @products }
     end
@@ -80,4 +85,5 @@ class ProductsController < ApplicationController
       format.xml { head :ok }
     end
   end
+  
 end

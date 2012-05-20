@@ -1,12 +1,14 @@
 WWWProkkis::Application.routes.draw do
   
+  root :to => 'home#index'
   resources :products
   
-  # vanhalla; match ":controller/:action/:id"
+  # productsin controlleri, metodi group joka puolestaan sorttaa eri productit
+  # sitten haetaan ao. mukaisesti ja löydetään tuote, jolla filteröidään
+  get "products/group"
+  
   # Routtaus oikealle alasivulle
   match ":controller/:action/:id"
-
-  #resources :line_items KAI TURHA
 
   resources :carts
 
@@ -33,6 +35,24 @@ WWWProkkis::Application.routes.draw do
   get "pages/alueet"
   
   get "pages/ajoneuvot"
+ 
+# admin-näkymään liittyviä
+  
+  get "admin/index"
+
+  get "admin/show"
+
+  get "admin/new"
+
+  get "admin/edit"
+
+  get "admin/create"
+
+  get "admin/update"
+
+  get "admin/destroy"
+  
+ #admin-jutut loppuu
 
   resources :posts
 
@@ -88,8 +108,7 @@ WWWProkkis::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   
-  # JUHO MUUTTI TÄTÄ
-   root :to => 'home#index'
+
 
   # See how all your routes lay out with "rake routes"
 

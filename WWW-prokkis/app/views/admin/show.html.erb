@@ -1,8 +1,10 @@
+<div id = "content">
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <b>Product:</b>
-  <%= @product.group %>
+  <%= @product.id %>
 </p>
 
 <p>
@@ -28,3 +30,5 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+</div>

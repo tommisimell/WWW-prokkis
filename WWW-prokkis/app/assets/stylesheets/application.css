@@ -60,7 +60,13 @@ clear: both;
 #main {
 	width: 960px;
 	margin: 0 auto;
-	
+}
+
+#sisaltodiv {
+margin: 0 auto;
+display: block;
+float: left;
+width: 90%;
 }
 
 #logokuva {
@@ -74,7 +80,18 @@ height: 100px;
 }
 
 #tekijanoikeus {
-	text-align: center;
+text-align: center;
+}
+
+/* Widthin voi säätää sopivaks, 100%=960px*/
+
+#ostoselementti {
+display: block;
+float: right;
+overflow: scroll;
+height: 250px;
+width: 10%;
+background: #FFF;
 }
 
 #leipateksti {

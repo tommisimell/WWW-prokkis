@@ -1,44 +1,6 @@
-<h1>Tuotteemme</h1>      
+<div id = "content">
 
-<%= link_to "Ostoskoriin", :controller => :carts, :action => :index %>
+<!-- partial on tässä 'muotti', jossa käytetään
+<%= render :partial => "pages/partialmodel", :locals => {:products => @products} %>
 
-<!-- talla lisataan sellanen magee vaakaviiva eri productien valiin -->
- <tr> <td colspan="8">
-	<hr/>
- </td> </tr>
-
-<table>
-
-<!-- Rakenne tuollainen, koska: kuvat vasemmalle. Sitten kaikki loput oikealle,
-mutta siten etta eri asiat asettuu natisti toistensa paalle. Poistettu product_id koska
-ei varsinaisesti kuulu asiakkaalle. link_to ohjaa lisatietosivulle kun klikataan joko
-kuvaa tai otsikkoa. Sanitize putsaa epavalidin html:n.-->
-
-<% @products.each do |product| %>
-  <tr>
-    <td><%= image_tag(product.image_url) %></td>
-	<td>
-    <div class="title"><%= link_to product.title, product %></div>
-    <div class="description"><%= sanitize(product.description) %></div>
-    <div class="links"> <%= link_to 'Lisatiedot', product %> | <%= link_to 'Muokkaa', edit_product_path(product) %> |
-    <%= link_to 'Poista tuote', product, :confirm => 'Oletko varma?', :method => :delete %></div>
-	
-	<!-- tuon tavoitteena on vaihtaa hinta Suomen euroiksi. span liittyy jutun nayttamiseen -->
-	<div class="price_line">
-		<span class="price"><%= number_to_currency product.price, :unit => "&euro;" %></span>
-		<%= button_to 'Lisaa ostoskoriin', :controller => :carts, :action => :add, :id => product %>
-		</div>
-	</td>
-  </tr>
-  
- <!-- talla lisataan sellanen magee vaakaviiva eri productien valiin -->
- <tr> <td colspan="2">
-	<hr/>
- </td> </tr>
- 
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'Uusi tuote', new_product_path %>
+</div>
