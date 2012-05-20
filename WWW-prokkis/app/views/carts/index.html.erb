@@ -17,12 +17,12 @@
 	<% total += quantity * product.price %>
 <% end %>
 	<tr>
-		<td colspan="4">Total:</td>
+		<td colspan="4">Yhteensä:</td>
 		<td><%= number_to_currency total, :unit => "&euro;" %></td>
 	</tr>
 	</table>
 
-<%= link_to "Takaisin tuotelistaan", admin_index_path %> |
+<%= link_to "Takaisin tuotelistaan", "/products/group/varusteet" %> |
 <%= button_to "Tyhjennä ostoskori", :action => :empty_cart %>
 
 </div>

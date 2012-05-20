@@ -32,8 +32,6 @@ WWWProkkis::Application.routes.draw do
   
   get "pages/aseet"
   
-  get "pages/alueet"
-  
   get "pages/ajoneuvot"
  
 # admin-n‰kym‰‰n liittyvi‰

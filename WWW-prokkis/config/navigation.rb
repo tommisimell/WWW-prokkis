@@ -14,16 +14,15 @@ SimpleNavigation::Configuration.run do |navigation|
 	
 	#Pitää vielä lisätä se että ku klikkaa valmismatkoja ni tulee kiva alotusruutu
 	#sen sijaan et näytetään safari.html.erb (jota kautta ei siis saada ainakaan tuotteita näkyviin)
-		primary.item :valmismatkat, 'Valmismatkat', pages_safari_path do |valmismatkat|
+		primary.item :valmismatkat, 'Valmismatkat', "/products/group/safari" do |valmismatkat|
 		valmismatkat.item :safari ,'Safari', "/products/group/safari"
 		valmismatkat.item :metsastys ,'Mestästys', "/products/group/metsastys"
 		valmismatkat.item :extreme ,'Extreme', "/products/group/extreme"
 		end
 		
-	primary.item :oma_matka, 'Oma matka', pages_varusteet_path do |oma_matka|
+	primary.item :oma_matka, 'Oma matka', "/products/group/varusteet" do |oma_matka|
 		oma_matka.item :varusteet ,'Varusteet', "/products/group/varusteet"
 		oma_matka.item :aseet ,'Aseet', "/products/group/aseet"
-		oma_matka.item :alueet ,'Alueet', "/products/group/alueet"
 		oma_matka.item :kulkuneuvot ,'Kulkuneuvot', "/products/group/kulkuneuvot"
 		end
 	
