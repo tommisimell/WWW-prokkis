@@ -6,18 +6,30 @@
  $(document).ready(function(){
  
  //Define the animation speed for the Carousel 
- var speed = 600;
+ var speed = 1000;
  var margin = 0;
  $('#navPrev').click(function(){
 	//As the rest of our carousel is hidden, lets move it's margin left untilit's in view
 	//We use the jQuery animate() function give this movement a nice smooth feel
-	margin+=180;
+	
+	if (margin<720) {
+	margin+=362;
+	}
+	else{
+	margin-=724;
+	}
+
 	$('#carousel ul').animate({marginLeft: -margin + 'px'}, speed);
 	});
  
  $('#navNext').click(function(){
 	 //And now lets move back to the start of the Carousel
-	 margin-=180;
+	 if (margin<=0) {
+	 margin=0;
+	 }
+	 else {
+	 margin-=362;
+	 }
 	 $('#carousel ul').animate({marginLeft: -margin + 'px'}, speed);
 	 });
  });
@@ -26,17 +38,15 @@
  
  <!-- Striimin divit -->
 
-<div id = "content">
+ <div id = "content">
  
+ <center>
  <div id="container">
   <div id="carousel">
 	  <ul> 
-		  <li><img src="/assets/image1.png" alt="" /></li>
-		  <li><img src="/assets/image2.png" alt="" /></li>
-		  <li><img src="/assets/image3.png" alt="" /></li>
-		  <li><img src="/assets/image4.png" alt="" /></li>
-		  <li><img src="/assets/image5.png" alt="" /></li>
-		  <li><img src="/assets/image6.png" alt="" /></li>
+		  <li><img src="/assets/stream_1.jpg" alt="" /></li>
+		  <li><img src="/assets/stream_2.jpg" alt="" /></li>
+		  <li><img src="/assets/stream_3.jpg" alt="" /></li>
 <!--		  <li><img src="image7.jpg" /></li>
 		  <li><img src="image8.jpg" /></li> -->
 	  </ul>  
@@ -44,6 +54,7 @@
 	<a id="navNext" href="#">Edellinen</a> 
     <a id="navPrev" href="#">Seuraava</a>  
 </div> 
+</center>
 
 
 <h2>Etusivu</h2>

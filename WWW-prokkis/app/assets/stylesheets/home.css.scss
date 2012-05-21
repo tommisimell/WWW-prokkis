@@ -1,26 +1,22 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 #container {
-height:200px;
- width:200px;
+height:380px;
+ width:380px;
  font-family:Tahoma;
  }
  
  #carousel {
- height:150px;
- width:180px;
+ height:362px;
+ width:362px;
  border:1px solid #000;
  overflow:hidden;
  }
  
  #carousel ul {
- list-style-type:none;margin-top:4px;
- width:2000px;
+ list-style-type:none;margin-top:0px;
+ width:1086px;
  margin-left:0;
  left:0;
- padding-left:1px;
+ padding-left:0px;
  }
  
  #carousel li {
@@ -28,8 +24,8 @@ height:200px;
  }
  
  #carousel ul li img{
- width:178px;
- height:140px;
+ width:360px;
+ height:360px;
  border:1px solid #ccc;
  float:left;
  }
@@ -43,4 +39,3 @@ height:200px;
  
  float:right;
  }
-
