@@ -20,7 +20,9 @@ a {text-decoration: none }
 /*Kuva varastettu sivulta http://farm6.staticflickr.com/5211/5435152877_2b62f4947e_b.jpg */
 body
 {
-background-image:url('taustakuva.jpg');
+background-image:url('TAUSTA_2.jpg');
+background-repeat: no-repeat;
+background-position: 100px;
 } 
 
 #ylapalkki {
