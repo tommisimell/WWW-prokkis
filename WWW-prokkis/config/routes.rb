@@ -12,6 +12,8 @@ WWWProkkis::Application.routes.draw do
 
   resources :carts
 
+  match '/carts/empty_cart', :controller => 'carts', :action => 'empty_cart'
+  
   get "pages/yhteystiedot"
 
   get "pages/historia"

@@ -5,12 +5,12 @@
 
 class CartsController < ApplicationController
 	def index
-		@carts = session[:carts] || {}
+		@carts = find_cart
 	end
 	
 	def add
 		id = params[:id]
-		carts = session[:carts] ||= {}
+		carts = find_cart
 		carts[id] = (carts[id] || 0) + 1
 		
 		redirect_to :action => :index
@@ -20,7 +20,14 @@ class CartsController < ApplicationController
 	def empty_cart
 		session[:carts] = nil
 		flash[:notice] = "Ostoskorissasi ei ole tuotteita"
-		redirect_to "/home/index"
+		redirect_to :action => 'index'
+	end
+	
+	
+	private
+	
+	def find_cart
+		session[:carts] ||= {}
 	end
 
 end

@@ -2,6 +2,8 @@
 height:380px;
  width:380px;
  font-family:Tahoma;
+ display: block;
+ float: right;
  }
  
  #carousel {
@@ -26,7 +28,7 @@ height:380px;
  #carousel ul li img{
  width:360px;
  height:360px;
- border:1px solid #ccc;
+ border:0px solid #ccc;
  float:left;
  }
  
