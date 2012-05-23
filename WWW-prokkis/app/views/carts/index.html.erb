@@ -10,7 +10,10 @@
 	<tr>
 		<td><%= image_tag((product.image_url), :width => 90) %></td>
 		<td width="80"><%= product.title %></td>
+		<td width="5"><%= '*' %></td>
 		<td width="30"><%= quantity %></td>
+		<td width="20"><%= button_to '(+)', :controller => :carts, :action => :add, :id => product %></td>
+		<td width="20"><%= button_to '(-)', :controller => :carts, :action => :delete, :id => product %></td>
 		<td width="60"><%= number_to_currency product.price, :unit => "&euro;" %></td>
 		<td width="60"><%= number_to_currency product.price * quantity, :unit => "&euro;" %></td>
 	</tr>
@@ -21,9 +24,9 @@
 		<td><%= number_to_currency total, :unit => "&euro;" %></td>
 	</tr>
 	</table>
-s
+
 <tr>
-	<td width="60"><%= link_to "Takaisin tuotelistaan", "/products/group/varusteet" %> </td>
+	<td width="60"><%= link_to "Takaisin tuotelistaan", :back %> </td>
 	<td width="60"><%= button_to "Tyhjennä ostoskori", :action => :empty_cart %> </td>
 </tr>
 	

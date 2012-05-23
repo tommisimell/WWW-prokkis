@@ -12,7 +12,7 @@
  *= require_tree .
 */
 
-h1 { color: red;} 
+h1 { color: rgba(170, 255, 170, 1);} 
 
 h2 { color: rgba(180, 255, 180, 1);}
 
@@ -35,14 +35,21 @@ background-size:100% 100%;
 } 
 
 #ylapalkki {
-background: #7CFC00;
+background-color: rgba(0, 150, 0, 0.3);
+height: 50px;
+}
+
+#ylapalkki a {
+	color: rgba(200, 255, 200, 1);
 }
 
 #ylapalkki li, #alapalkki li {
 display: block;
 float: left;
+padding-top: 16px;
 padding-left: 3px;
-padding-right: 2px;
+padding-right: 8px;
+padding-bottom: 16px;
 }
 
 #alapalkki a {
@@ -52,11 +59,12 @@ color: white;
 }
 
 .selected {
-	background:#33CC00;
+	/*background:#33CC00;*/
+	background-color: rgba(0, 120, 0, 0.7);
 }
 
 #alapalkki, #alapalkki li {
-	background: #33CC00;
+	background-color: rgba(255, 180, 0, 0.3);
 	color: white;
 }
 
@@ -93,6 +101,13 @@ height: 200px;
 #otsikkokuva {
 width: 100%;
 height: 100px;
+float:left;
+}
+
+#etusivuotsikkokuva {
+	width:100%;
+	height: 191px;
+	float:left;
 }
 
 #tekijanoikeus {

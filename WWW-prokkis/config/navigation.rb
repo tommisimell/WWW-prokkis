@@ -34,6 +34,8 @@ SimpleNavigation::Configuration.run do |navigation|
 		end
 	primary.item :yhteystiedot, 'Yhteystiedot', pages_yhteystiedot_path
 	
+	primary.item :ostoskori, 'Ostoskori', carts_path
+	
 
    
    

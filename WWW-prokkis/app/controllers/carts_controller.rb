@@ -16,6 +16,18 @@ class CartsController < ApplicationController
 		redirect_to :action => :index
 	end
 	
+
+	
+	def delete
+		id = params[:id]
+		carts = find_cart
+		
+		#jos carts[id] < 1 niin quantityksi tulee 0: muuten quantity pienenee yhdellä
+		carts[id] = (carts[id] < 1) ? 0 : (carts[id] || 0) - 1
+
+		redirect_to :action => :index
+	end
+	
 	# Tässä on vielä jotain hyvinkin hämärää.
 	def empty_cart
 		session[:carts] = nil
