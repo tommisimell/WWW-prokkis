@@ -22,7 +22,8 @@ body
 {
 background-image:url('TAUSTA_2.jpg');
 background-repeat: no-repeat;
-background-position: 100px;
+background-attachment:fixed;
+background-size:100% 100%;
 } 
 
 #ylapalkki {
