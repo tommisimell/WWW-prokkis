@@ -24,8 +24,12 @@ a {text-decoration: none }
 
 td { color: rgba(200, 255, 200, 1);}
 
+.links a { color: rgba(255, 200, 200, 1);}
 
-/*Kuva varastettu sivulta http://farm6.staticflickr.com/5211/5435152877_2b62f4947e_b.jpg */
+#navNext { color: rgba(255, 200, 200, 1); }
+
+#navPrev { color: rgba(255, 200, 200, 1); }
+
 body
 {
 background-image:url('TAUSTA_2.jpg');
@@ -59,7 +63,6 @@ color: white;
 }
 
 .selected {
-	/*background:#33CC00;*/
 	background-color: rgba(0, 120, 0, 0.7);
 }
 
@@ -69,7 +72,6 @@ color: white;
 }
 
 #content {
-	/*background: #7CFC00; */
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -80,10 +82,6 @@ clear: both;
 #main {
 	width: 960px;
 	margin: 0 auto;
-/*	filter:alpha(opacity=50);
-	-moz-opacity:0.50;
-	-khtml-opacity: 0.50; 
-	opacity: 0.60;*/
 }
 
 #sisaltodiv {
@@ -114,16 +112,7 @@ float:left;
 text-align: center;
 }
 
-/* Widthin voi säätää sopivaks, 100%=960px*/
-/*
-#ostoselementti {
-display: block;
-float: right;
-overflow: scroll;
-height: 250px;
-width: 10%;
-background: #FFF;
-}*/
+
 
 #leipateksti {
 	display: block;
@@ -141,5 +130,7 @@ background: #FFF;
 #flashkartta  {
 	display: block;
 	float: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
